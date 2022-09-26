@@ -120,8 +120,72 @@ const charizard = {
   weigthInKg: 90.5,
   img: 'https://maurowernly.github.io/Pokedex/images/pokemons/006Charizard.png',
 };
+const squirtle = {
+  baseStats: {
+    attack: 48,
+    defense: 65,
+    hp: 44,
+    spAtk: 50,
+    spDef: 64,
+    speed: 43,
+  },
+  name: 'Squirtle',
+  number: '007',
+  jpName: 'ゼニガメ',
+  region: 'Kanto',
+  type: ['water'],
+  heightInM: 0.5,
+  weigthInKg: 9,
+  img: 'https://maurowernly.github.io/Pokedex/images/pokemons/007Squirtle.png',
+};
+const wartortle = {
+  baseStats: {
+    attack: 63,
+    defense: 80,
+    hp: 59,
+    spAtk: 65,
+    spDef: 80,
+    speed: 58,
+  },
+  name: 'Wartortle',
+  number: '008',
+  jpName: 'カメール',
+  region: 'Kanto',
+  type: ['water'],
+  heightInM: 1,
+  weigthInKg: 22.5,
+  img: 'https://maurowernly.github.io/Pokedex/images/pokemons/008Wartortle.png',
+};
+const blastoise = {
+  baseStats: {
+    attack: 83,
+    defense: 100,
+    hp: 79,
+    spAtk: 85,
+    spDef: 105,
+    speed: 78,
+  },
+  name: 'Blastoise',
+  number: '009',
+  jpName: 'カメックス',
+  region: 'Kanto',
+  type: ['water'],
+  heightInM: 1.6,
+  weigthInKg: 85.5,
+  img: 'https://maurowernly.github.io/Pokedex/images/pokemons/009Blastoise.png',
+};
 
-pkmnArr.push(bulbasaur, ivysaur, venusaur, charmander, charmeleon, charizard);
+pkmnArr.push(
+  bulbasaur,
+  ivysaur,
+  venusaur,
+  charmander,
+  charmeleon,
+  charizard,
+  squirtle,
+  wartortle,
+  blastoise
+);
 
 /* Creating the selector options for selecting which Pokemon will be displayed */
 for (let i = 0; i < pkmnArr.length; i++) {

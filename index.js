@@ -8,8 +8,10 @@ const pkmnType = document.querySelector('.pkmnType');
 const pkmnStats = document.querySelector('.pkmnStats');
 const pkmnRegion = document.querySelector('.pkmnRegion');
 
+/* Creating an Array that will contain all aviable Pokemons */
 const pkmnArr = [];
 
+/* Declaring some Pokemons */
 const bulbasaur = {
   baseStats: {
     attack: 49,
@@ -121,6 +123,7 @@ const charizard = {
 
 pkmnArr.push(bulbasaur, ivysaur, venusaur, charmander, charmeleon, charizard);
 
+/* Creating the selector options for selecting which Pokemon will be displayed */
 for (let i = 0; i < pkmnArr.length; i++) {
   const el = pkmnArr[i];
   const newPkmnOption = pkmnName.appendChild(document.createElement('option'));
@@ -129,19 +132,24 @@ for (let i = 0; i < pkmnArr.length; i++) {
   newPkmnOption.innerText = `${el.name}`;
 }
 
+/* Main displayPokemon function */
 const displayPokemon = (pkmnNum) => {
   pkmnNum--;
 
+  /* Changing the Pokemon's number */
   pkmnNumber.innerText = `#${pkmnArr[pkmnNum].number}`;
 
+  /* Changing the Pokemon's size */
   pkmnHeight.innerText = `Height: ${pkmnArr[pkmnNum].heightInM}m`;
-
   pkmnWeigth.innerText = `Weigth: ${pkmnArr[pkmnNum].weigthInKg}kg`;
 
+  /* Changing the Pokemon's img */
   pkmnImg.src = pkmnArr[pkmnNum].img;
   pkmnImg.alt = pkmnArr[pkmnNum].name;
 
+  /* Removing all existent childs for pkmnType */
   while (pkmnType.firstChild) pkmnType.removeChild(pkmnType.lastChild);
+  /* Changing the Pokemon's type images */
   for (let i = 0; i < pkmnArr[pkmnNum].type.length; i++) {
     const el = pkmnArr[pkmnNum].type[i];
     const newPkmnTypeImg = pkmnType.appendChild(document.createElement('img'));
@@ -216,13 +224,15 @@ const displayPokemon = (pkmnNum) => {
           'https://maurowernly.github.io/Pokedex/images/types/Water.png';
         break;
     }
-
     newPkmnTypeImg.alt = `${el} type`;
   }
 
+  /* Changing the Pokemon's japanese name */
   pkmnJpName.innerText = `${pkmnArr[pkmnNum].jpName}`;
 
+  /* Removing all existent childs from pkmnStats */
   while (pkmnStats.firstChild) pkmnStats.removeChild(pkmnStats.lastChild);
+  /* Changing the Pokemon's stats */
   const pkmnBStatsKeys = Object.keys(pkmnArr[pkmnNum].baseStats);
   for (let i = 0; i < pkmnBStatsKeys.length; i++) {
     const key = pkmnBStatsKeys[i];
@@ -237,11 +247,14 @@ const displayPokemon = (pkmnNum) => {
     newPkmnStatDiv.innerText = `${statName}: ${pkmnArr[pkmnNum].baseStats[key]}`;
   }
 
+  /* Changing the Pokemon's region */
   pkmnRegion.innerText = `Region: ${pkmnArr[pkmnNum].region}`;
 };
 
+/* First display on the website with Pokemon #001 */
 displayPokemon(1);
 
+/* Adding an event listener for when changing the Pokemon to be displayed in selector */
 pkmnName.addEventListener('change', () => {
   displayPokemon(parseInt(pkmnName.value));
 });

@@ -1,0 +1,113 @@
+body {
+  background-color: #92d1b4;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.basicInfoSection {
+  padding-left: 1vw;
+  padding-top: 1vh;
+}
+.pkmnNumber {
+  margin: 0;
+  font-size: 1rem;
+}
+.pkmnName {
+  background-color: #92d1b4;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 0.8vh;
+  padding-bottom: 0.4vh;
+  padding-left: 1vh;
+  padding-top: 0.4vh;
+  width: 15%;
+}
+
+.mid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60%;
+}
+
+.sizeSection {
+  font-size: smaller;
+  padding-left: 3vw;
+}
+.pkmnHeight {
+  margin-bottom: 0.3em;
+}
+.pkmnWeigth {
+  margin-top: 0.3em;
+}
+
+.imageSection {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  width: 35%;
+}
+.pkmnImg {
+  position: absolute;
+  top: 0;
+  left:0;
+  right:15vw;
+  bottom:0;
+  margin: auto;
+  max-height: 42vh;
+}
+.pkmnJpName {
+  color: #000;
+  font-size: 6rem;
+  opacity: 40%;
+  padding-top: 10%;
+}
+
+.statsSection {
+  width: 24vw;
+}
+.pkmnTypeImg {
+  max-width: 3vw;
+}
+.statsTitle {
+  margin-top: 0;
+}
+.pkmnStats {
+  border-left: 3px solid #b0dec8;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 1vw;
+}
+.pkmnStatDiv {
+  background-color: #fff;
+  border-radius: 6px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  font-size: x-small;
+  justify-content: center;
+  margin-bottom: 0.6vh;
+  margin-right: 1vh;
+  margin-top: 0.1vh;
+  padding-bottom: 0.5vh;
+  padding-left: 1vh;
+  padding-right: 1vh;
+  padding-top: 0.5vh;
+}
+
+.regionSection {
+  font-size: smaller;
+  transform: rotate(-90deg);
+  width: 6%;
+  margin-bottom: 4%;
+}
